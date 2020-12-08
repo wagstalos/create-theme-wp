@@ -6,7 +6,6 @@
 	</div>
 	<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 	<div class="meta-info">
-
 		<p>
 			Categoria: <span><?php the_category( ' ' ); ?></span><br>
 			Por <span><?php the_author_posts_link(); ?></span> 

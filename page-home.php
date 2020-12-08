@@ -7,11 +7,11 @@
             </div>
           </section>
 
-          <section class="s-services">
+          <section class="s-services" id="nossa-proposta">
             <div class="container">
                 <!-- <h1>Nossos Serviços</h1> -->
-                <div class="row ">
-                      <div class="col-sm-6"> 
+                <div class="row flex align-items-md-center">
+                      <div class="col-sm-7"> 
                           <div class="services-item img-fluid">
                             <?php 
                               if( is_active_sidebar('services-1')){
@@ -20,7 +20,7 @@
                             ?>
                           </div>    
                     </div>
-                      <div class="col-sm-6"> 
+                      <div class="col-sm-5"> 
                           <div class="services-item">
                           <?php 
                               if( is_active_sidebar('services-2')){
@@ -33,19 +33,19 @@
              </div> <!-- fim container -->
           </section>
 
-          <section class="middle-area">
+          <section class="middle-area" id="capacitacoes">
             <div class="container">
                 <div class="row">
-                        <!-- <?php get_sidebar( 'home' ); ?> -->
+                   <!-- <?php get_sidebar( 'home' ); ?> -->
                     <div class="news">
                         <div class="container">
-                                <h1>Nossos Cursos</h1>
-                                <div class="row">
+                                <h2 class="text-center p-100">Capacitações em Compliance</h2>
+                                <div class="row mt-4">
                                   <?php 
                                       // Segundo Loop
                                       $args = array(
                                         'post_type' => 'post',
-                                        'posts_per_page' ,
+                                        'posts_per_page' => 20,
                                         // 'category__not_in' => array( 5 ),
                                         'category__in' => array(  ),
                                         // 'offset' => 1
@@ -57,7 +57,7 @@
                                         while( $secondary->have_posts() ): $secondary->the_post();
                                       ?>
 
-                                      <div class="col-sm-6 col-md-3 ">
+                                      <div class="col-sm-6 col-md-4 ">
                                         <?php get_template_part( 'template-parts/content', 'secondary' ); ?>
                                       </div>
 
