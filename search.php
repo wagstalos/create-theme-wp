@@ -5,7 +5,7 @@
 			<h4>Resultado da pesquisa: </h4> <?php echo get_search_query(); ?>
 			<?php 
 				
-				get_search_form();
+				// get_search_form();
 
 				while( have_posts() ): the_post();
 

@@ -9,11 +9,10 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 .top-bar{
-    padding: 10px;
     background-color: #F8F8FA;
 }
 .p-100{
-    padding: 100px 0 100px 0;
+    padding: 80px 0 80px 0;
 }
 #search-btn{
     background-color: #fff;
@@ -154,12 +153,25 @@ nav.fill ul li a:hover:after {
     margin-top: 20px;
     background-color:rgb(229, 242, 253);
 }
+/* Slider */
+.wppsac-post-slider.design-1 .wppsac-post-content-left {
+    width: 100%;
+    height: 100%;
+    background: rgb(42 41 86 / 50%);
+    color: #fff;
+}
+.wppsac-post-slider.design-1 .wppsac-post-content-left {
+    padding: 138px 35px 35px 14%;
+}
+.wppsac-post-slider .wppsac-post-categories ul.wppsac-post-categories-list li:nth-child(4n+1) a {
+    background: #77ccfd;
+}
 /* menu footer */
 .footer-menu ul li{
     display: inline;
 }
 .logo img{
-    width: 150px;;
+    width: 110px;;
 }
 /* WP custom */
 .wp-block-button{
@@ -167,20 +179,16 @@ nav.fill ul li a:hover:after {
 }
 /* img post */
 .wp-post-image{
-    /* width: 100%; */
     margin: 0 15px 10px 0;
-    /* float: left; */
 }
 .services-item .widget-wrapper img{
     border-radius: 10px;
     width: 100%;
 }
-
 /* Serviços */
 .s-services{
     padding: 100px 0 100px 0;
 }
-
 /* Destaques */
 .s-featured{
     padding: 100px 0 100px 0;
@@ -192,7 +200,6 @@ nav.fill ul li a:hover:after {
 .widget-title p{
     color: var( --color-gray-dark);
 }
-
 .secondary{
     background-color: #fff;
     height: auto;
@@ -203,10 +210,14 @@ nav.fill ul li a:hover:after {
     border-radius: 5px;
 }
 
-
 /* Footer - Footer Menu */
 footer{
     padding: 50px 0 50px 0;
     color: aliceblue;
     background-color: #000;
+}
+@media only screen and (max-width: 800px) {
+    /* .wppsac-post-slider.design-1 .wppsac-post-content-left {
+        padding: 138px 50% 35px 20px;
+    } */
 }

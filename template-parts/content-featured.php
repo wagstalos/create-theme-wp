@@ -8,6 +8,7 @@
 	<div class="meta-info">
 		<p>
 			Categoria: <span><?php the_category( ' ' ); ?></span><br>
+			<span><?php echo get_wp_user_avatar(get_the_author_meta('ID'), 35); ?></span>
 			Por <span><?php the_author_posts_link(); ?></span> 
 			
 			<?php the_tags( 'Tags: <span>', ', ', '</span>' ); ?>

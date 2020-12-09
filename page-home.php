@@ -2,9 +2,13 @@
   <div class="content-area">
       <main>
           <section class="slide">
-            <div class="container">
-              <div class="row">Slide</div>
-            </div>
+              <?php  echo do_shortcode('
+              [recent_post_slider 
+              design="design-1" 
+              limit="4" 
+              show_date="false"
+              autoplay_interval="3000"
+              ]'); ?>
           </section>
 
           <section class="s-services" id="nossa-proposta">
@@ -57,7 +61,7 @@
                                         while( $secondary->have_posts() ): $secondary->the_post();
                                       ?>
 
-                                      <div class="col-sm-6 col-md-4 ">
+                                      <div class="col-sm-6 col-md-3 ">
                                         <?php get_template_part( 'template-parts/content', 'secondary' ); ?>
                                       </div>
 

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();  ?>  >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Page Compliance</title> -->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -17,7 +16,7 @@
             </div>
            
         </section>
-        <section class="menu-area shadow-sm mb-2 bg-white">
+        <section class="menu-area shadow-sm bg-white">
             <div class="container">
             <!-- nav php -->
             <nav class="navbar navbar-expand-md stroke">
