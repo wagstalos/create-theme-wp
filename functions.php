@@ -66,6 +66,18 @@ function wpcurso_sidebars(){
                 'after_title' => '</h2>'
                 )
             );
+    //Title 1
+    register_sidebar(
+        array(
+           'name' => 'Title Section 1',
+           'id' => 'title-section-1',
+           'description' => 'First title section', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div> ',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+            )
+        );
     //Serviços
     register_sidebar(
             array(
@@ -89,6 +101,18 @@ function wpcurso_sidebars(){
                 'after_title' => '</h2>'
                 )
             );
+     //Title 1
+     register_sidebar(
+        array(
+           'name' => 'Title Section 2',
+           'id' => 'title-section-2',
+           'description' => 'Second title section.', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div> ',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>'
+            )
+        );
     //Destaques
     register_sidebar(
             array(
@@ -134,6 +158,20 @@ function wpcurso_sidebars(){
                 'after_title' => '</h3>'
                 )
             );
+    
+    //social 
+    register_sidebar(
+        array(
+           'name' => 'Social Media Icons top',
+           'id' => 'social-media',
+           'description' => 'Place your media here.', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div> ',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
+            )
+        );
+    
         
 }
 add_action( 'widgets_init' , 'wpcurso_sidebars' );

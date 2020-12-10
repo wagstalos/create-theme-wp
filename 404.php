@@ -10,7 +10,7 @@
 						
 						<div class="error-404 p-100">
 						<header>
-							<h1>OPS</h1>
+							<h1>OPS!</h1>
 							<p>A página que você procura não foi encontrada. </p>
 						</header>
 						</div>

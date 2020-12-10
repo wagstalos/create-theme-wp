@@ -4,7 +4,7 @@
           <section class="slide">
               <?php  echo do_shortcode('
               [recent_post_slider 
-              design="design-1" 
+              design="design-2" 
               limit="4" 
               show_date="false"
               autoplay_interval="3000"
@@ -14,6 +14,17 @@
           <section class="s-services" id="nossa-proposta">
             <div class="container">
                 <!-- <h1>Nossos Serviços</h1> -->
+                <div class="row">
+                  <div class="col-12">
+                    <h1>
+                    <?php 
+                        if( is_active_sidebar('title-section-1')){
+                            dynamic_sidebar( 'title-section-1' );
+                        }
+                        ?>
+                    </h1>
+                  </div>
+                </div>
                 <div class="row flex align-items-md-center">
                       <div class="col-sm-7"> 
                           <div class="services-item img-fluid">
@@ -43,7 +54,17 @@
                    <!-- <?php get_sidebar( 'home' ); ?> -->
                     <div class="news">
                         <div class="container">
-                                <h2 class="text-center p-100">Capacitações em Compliance</h2>
+                                <div class="row">
+                                  <div class="col-12">
+                                    <h1>
+                                    <?php 
+                                        if( is_active_sidebar('title-section-2')){
+                                            dynamic_sidebar( 'title-section-2' );
+                                        }
+                                        ?>
+                                    </h1>
+                                  </div>
+                                </div>
                                 <div class="row mt-4">
                                   <?php 
                                       // Segundo Loop
@@ -70,7 +91,6 @@
                                         wp_reset_postdata();
                                       endif;									
                                       ?>
-
                                 </div><!-- row -->
                         </div><!-- container -->
                     </div><!-- news col-md-8 -->		
@@ -121,6 +141,15 @@
 
             </div>
           </section> 
+          
+          <!-- contato -->
+          <section>
+            <div class="container text-center">
+            <?php echo do_shortcode ('[contact-form-7 id="106" title="Formulário de contato 1"]'); ?>
+            <?php echo do_shortcode(  '[pgaf_post_filter] ')  ?>
+            <?php echo do_shortcode(  '[pgaf_post_grid limit="15"] ')  ?>
+            </div>
+          </section>
       </main>
   </div>
 <?php get_footer(); ?>

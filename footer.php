@@ -1,10 +1,17 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="copyright col-sm-7 text-left">
-                <p>Copiright</p>
+        <div class="copyright col-sm-3 text-center">
+                <?php 
+                    if(is_active_sidebar('social-media')){
+                        dynamic_sidebar('social-media');
+                    }
+                ?>
             </div>
-            <nav class="footer-menu col-sm-5 col-8 text-right">
+            <div class="copyright col-sm-6 text-center">
+                <p>© 2020 Digital Pages. Todos os direitos reservados.</p>
+            </div>
+            <nav class="footer-menu col-sm-3  text-center">
                 <?php
                     wp_nav_menu(
                         array(
