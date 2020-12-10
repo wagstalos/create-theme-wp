@@ -1,102 +1,75 @@
 <?php get_header(); ?>
-  <div class="content-area">
-      <main>
-          <section class="slide">
-              <?php  echo do_shortcode('
+<div class="content-area">
+    <main>
+        <section class="slide">
+            <?php  echo do_shortcode('
               [recent_post_slider 
               design="design-2" 
               limit="4" 
               show_date="false"
               autoplay_interval="3000"
               ]'); ?>
-          </section>
+        </section>
 
-          <section class="s-services" id="nossa-proposta">
+        <section class="s-services" id="nossa-proposta">
             <div class="container">
                 <!-- <h1>Nossos Serviços</h1> -->
                 <div class="row">
-                  <div class="col-12">
-                    <h1>
-                    <?php 
+                    <div class="col-12">
+                        <h1>
+                            <?php 
                         if( is_active_sidebar('title-section-1')){
                             dynamic_sidebar( 'title-section-1' );
                         }
                         ?>
-                    </h1>
-                  </div>
+                        </h1>
+                    </div>
                 </div>
                 <div class="row flex align-items-md-center">
-                      <div class="col-sm-7"> 
-                          <div class="services-item img-fluid">
+                    <div class="col-sm-7">
+                        <div class="services-item img-fluid">
                             <?php 
                               if( is_active_sidebar('services-1')){
                                   dynamic_sidebar( 'services-1' );
                               }
                             ?>
-                          </div>    
+                        </div>
                     </div>
-                      <div class="col-sm-5"> 
-                          <div class="services-item">
-                          <?php 
+                    <div class="col-sm-5">
+                        <div class="services-item">
+                            <?php 
                               if( is_active_sidebar('services-2')){
                                   dynamic_sidebar( 'services-2' );
                               }
                             ?>
-                          </div>    
+                        </div>
                     </div>
-              </div> <!-- fim row -->
-             </div> <!-- fim container -->
-          </section>
+                </div> <!-- fim row -->
+            </div> <!-- fim container -->
+        </section>
 
-          <section class="middle-area" id="capacitacoes">
+        <section class="middle-area" id="capacitacoes">
             <div class="container">
                 <div class="row">
-                   <!-- <?php get_sidebar( 'home' ); ?> -->
-                    <div class="news">
-                        <div class="container">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <h1>
-                                    <?php 
-                                        if( is_active_sidebar('title-section-2')){
+                    <div class="col-12">
+                        <h1>
+                            <?php 
+                                     if( is_active_sidebar('title-section-2')){
                                             dynamic_sidebar( 'title-section-2' );
                                         }
                                         ?>
-                                    </h1>
-                                  </div>
-                                </div>
-                                <div class="row mt-4">
-                                  <?php 
-                                      // Segundo Loop
-                                      $args = array(
-                                        'post_type' => 'post',
-                                        'posts_per_page' => 20,
-                                        // 'category__not_in' => array( 5 ),
-                                        'category__in' => array(  ),
-                                        // 'offset' => 1
-                                      );
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <?php echo do_shortcode ('[pgaf_post_filter content_words_limit="20" show_date="true" extra_class=""]'); ?>
+                    </div>
 
-                                      $secondary = new WP_Query( $args );
-
-                                      if( $secondary->have_posts() ):
-                                        while( $secondary->have_posts() ): $secondary->the_post();
-                                      ?>
-
-                                      <div class="col-sm-6 col-md-3 ">
-                                        <?php get_template_part( 'template-parts/content', 'secondary' ); ?>
-                                      </div>
-
-                                      <?php
-                                        endwhile;
-                                        wp_reset_postdata();
-                                      endif;									
-                                      ?>
-                                </div><!-- row -->
-                        </div><!-- container -->
-                    </div><!-- news col-md-8 -->		
-				</div><!-- row -->
-             </div> <!-- container -->
-          </section>
+                </div><!-- row -->
+                
+            </div> <!-- container -->
+        </section>
 
         <section class="s-featured">
             <div class="container">
@@ -136,22 +109,19 @@
             </div>
         </section>
 
-          <section class="map">
+        <section class="map">
             <div class="container">
 
             </div>
-          </section> 
-          
-          <!-- contato -->
-          <section>
-            <div class="container text-center">
-            <?php echo do_shortcode ('[contact-form-7 id="106" title="Formulário de contato 1"]'); ?>
-            <?php echo do_shortcode(  '[pgaf_post_filter] ')  ?>
-            <?php echo do_shortcode(  '[pgaf_post_grid limit="15"] ')  ?>
-            </div>
-          </section>
-      </main>
-  </div>
-<?php get_footer(); ?>
+        </section>
 
-        
+        <!-- contato -->
+        <section>
+            <div class="container text-center">
+                <?php echo do_shortcode ('[contact-form-7 id="106" title="Formulário de contato 1"]'); ?>
+
+            </div>
+        </section>
+    </main>
+</div>
+<?php get_footer(); ?>

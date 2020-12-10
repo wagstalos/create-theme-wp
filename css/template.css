@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root{
-    --color-blue-dark: #003A6C;
+    --color-blue-dark: #1c0950;
     --color-gray-dark: #737373;
 }
 body{
@@ -10,6 +10,9 @@ body{
 }
 p{
     color:var( --color-gray-dark);
+}
+a{
+    color: #1c0950;
 }
 a:hover{
     text-decoration: none;
@@ -47,6 +50,7 @@ nav ul {
   }
 nav ul li {
     display: inline-block;
+    margin-right: 20px;
   }
 nav ul li a,
 nav ul li a:after,
@@ -54,7 +58,7 @@ nav ul li a:before {
     transition: all .5s;
 }
 nav ul li a:hover {
-    color: #555;
+    color: #1491CD;
 }
   /* stroke */
 nav.stroke ul li a,

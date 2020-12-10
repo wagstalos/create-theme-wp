@@ -1,4 +1,4 @@
-<article <?php post_class(); ?> >
+<article <?php post_class(); ?>>
     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(275,275 ) ); ?></a>
     <h2><?php the_title(); ?> </h2>
     <!-- <?php the_content(); ?> -->
