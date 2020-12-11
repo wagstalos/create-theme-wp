@@ -8,9 +8,11 @@
                     }
                 ?>
             </div>
+
             <div class="copyright col-sm-6 text-center">
-                <p>© 2020 Digital Pages. Todos os direitos reservados.</p>
+                <p> <?php echo get_theme_mod('set_copyright'); ?> </p>
             </div>
+            
             <nav class="footer-menu col-sm-3  text-center">
                 <?php
                     wp_nav_menu(

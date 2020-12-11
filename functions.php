@@ -1,5 +1,11 @@
 <?php 
 
+
+
+
+// Requerendo o arquivo do Customizer
+require get_template_directory() . '/inc/customizer.php';
+
 //Carregando nossos scripts e folhas de estilos
 function load_scripts(){
     wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array( 'jquery'), '4.5.3', true );
@@ -12,7 +18,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 //titulo 
 if(!function_exists('wp_render_title_tag')){
     function pc_render_title() {
-        ?> <title><?php wp_title('|', true, 'right' );?> <?php bloginfo('name'); ?> </title>  <?php
+        ?> <title><?php wp_title('|', true, 'right' );?> <?php bloginfo('name'); ?> </title> <?php
     }
     add_action('wp_head', 'pc_render_title');
 }
@@ -66,6 +72,18 @@ function wpcurso_sidebars(){
                 'after_title' => '</h2>'
                 )
             );
+     //Sub-title 1
+     register_sidebar(
+        array(
+           'name' => 'Sub-title Section 1',
+           'id' => 'sub-title-section-1',
+           'description' => 'First title section', 
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div> ',
+            'before_title' => '<h4 class="widget-sub-title">',
+            'after_title' => '</h4>'
+            )
+        );
     //Title 1
     register_sidebar(
         array(
@@ -101,12 +119,24 @@ function wpcurso_sidebars(){
                 'after_title' => '</h2>'
                 )
             );
-     //Title 1
-     register_sidebar(
+   //Sub-title 2
+   register_sidebar(
+    array(
+       'name' => 'Sub-title Section 2',
+       'id' => 'sub-title-section-2',
+       'description' => 'second sub-title section', 
+        'before_widget' => '<div class="widget-wrapper">',
+        'after_widget' => '</div> ',
+        'before_title' => '<h4 class="widget-sub-title">',
+        'after_title' => '</h4>'
+        )
+    );
+    //Title 2
+    register_sidebar(
         array(
-           'name' => 'Title Section 2',
-           'id' => 'title-section-2',
-           'description' => 'Second title section.', 
+        'name' => 'Title Section 2',
+        'id' => 'title-section-2',
+        'description' => 'First title section', 
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div> ',
             'before_title' => '<h2 class="widget-title">',
@@ -188,4 +218,3 @@ function themename_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
    }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
-

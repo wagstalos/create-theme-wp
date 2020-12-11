@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;1,600&display=swap');
 
 :root{
-    --color-blue-dark: #1c0950;
+    --color-blue-dark: #003A6C;
     --color-gray-dark: #737373;
+    --color-green-light: #25D9D9;
+
 }
 body{
     background-color: #F8F8FA;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Barlow', sans-serif;;
 }
 p{
     color:var( --color-gray-dark);
@@ -209,19 +211,38 @@ nav.fill ul li a:hover:after {
 }
 /* Serviços */
 .s-services{
-    padding: 100px 0 100px 0;
+    padding: 0 0 100px 0;
 }
 /* Destaques */
 .s-featured{
     padding: 100px 0 100px 0;
 }
-.widget-title{
-    padding: 10px 0 10px 0;
-    color: var( --color-blue-dark);
+/* capacitações */
+.pgafu-filter li a {
+    color: #3990E7;
+    background: #bedfff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.pgafu-filter li.pgafu-active-filtr a {
+    background: #3990E7;
+    color: #fff;
+}
+/* widgets */
+.textwidget{
+   color: var( --color-blue-dark)
+}
+.widget-sub-title{
+    color: var( --color-green-light );
+}
+.widget-sub-title .textwidget p{
+    font-size: 30px;
+    color: var( --color-gray-dark);
 }
 .widget-title p{
     color: var( --color-gray-dark);
 }
+
 .secondary{
     background-color: #fff;
     height: auto;
@@ -238,6 +259,13 @@ footer{
     color: aliceblue;
     background-color: #252525;
 }
+footer .menu{
+    color: white;
+}
+
+/* Contact Page */
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea{ border: 1px solid #eeeeee; background: #f6f6f6; width: 100%; padding: 10px; }
+.wpcf7 input[type="submit"]{ padding: 10px 20px 10px 20px; background: #1491CD; border: 0; color: #ffffff; text-transform: uppercase; width: initial; }
 @media only screen and (max-width: 800px) {
     /* .wppsac-post-slider.design-1 .wppsac-post-content-left {
         padding: 138px 50% 35px 20px;
