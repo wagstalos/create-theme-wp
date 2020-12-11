@@ -7,7 +7,11 @@
               design="design-2" 
               limit="4" 
               show_date="false"
-              autoplay_interval="3000"
+              show_author="false"
+              dots="true"
+              arrows="false"
+              autoplay_interval="10000"
+              recent_post_slider lazyload="ondemand"
               ]'); ?>
         </section>
 
